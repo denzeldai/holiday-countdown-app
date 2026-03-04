@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>节假日倒计时</title>
+    <meta name="theme-color" content="#0ea5e9" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="icons/icon-192.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="card" aria-live="polite">
+        <p class="label">距离最近假期</p>
+        <h1 id="holidayName" class="name">加载中...</h1>
+        <p class="days"><span id="daysLeft">--</span> 天</p>
+        <p id="holidayDate" class="date">----</p>
+        <p id="status" class="status"></p>
+        <section class="upcoming">
+          <p class="upcoming-title">未来 3 个假期</p>
+          <ul id="upcomingList" class="upcoming-list"></ul>
+        </section>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+:root {
+  --bg: linear-gradient(145deg, #eef2ff 0%, #f6fbff 50%, #ffffff 100%);
+  --text: #0f172a;
+  --muted: #475569;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --accent: #0ea5e9;
+  --shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: linear-gradient(145deg, #0f172a 0%, #111827 45%, #1f2937 100%);
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --card-bg: rgba(15, 23, 42, 0.7);
+    --accent: #38bdf8;
+    --shadow: 0 20px 50px rgba(2, 6, 23, 0.45);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Avenir Next", "PingFang SC", "Noto Sans SC", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: min(520px, 92vw);
+  text-align: center;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 36px 28px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.label {
+  margin: 0;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.name {
+  margin: 10px 0 16px;
+  font-size: clamp(28px, 5vw, 40px);
+  letter-spacing: 0.02em;
+}
+
+.days {
+  margin: 0;
+  font-size: clamp(30px, 8vw, 56px);
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.date {
+  margin: 12px 0 0;
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.status {
+  min-height: 22px;
+  margin: 12px 0 0;
+  font-size: 14px;
+  color: #ef4444;
+}
+
+.upcoming {
+  margin-top: 18px;
+  text-align: left;
+}
+
+.upcoming-title {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.upcoming-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+
+.upcoming-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(148, 163, 184, 0.12);
+  font-size: 14px;
+}
+
+.upcoming-meta {
+  color: var(--muted);
+}

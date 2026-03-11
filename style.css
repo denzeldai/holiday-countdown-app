@@ -112,3 +112,19 @@ body {
 .upcoming-meta {
   color: var(--muted);
 }
+
+.footer {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.icp {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.icp:hover {
+  text-decoration: underline;
+}

@@ -120,11 +120,26 @@ body {
   color: var(--muted);
 }
 
-.icp {
+.icp,
+.psb {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   color: var(--muted);
   text-decoration: none;
 }
 
-.icp:hover {
+.footer a + a {
+  margin-left: 16px;
+}
+
+.psb-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+.icp:hover,
+.psb:hover {
   text-decoration: underline;
 }
